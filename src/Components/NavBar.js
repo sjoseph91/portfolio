@@ -1,6 +1,6 @@
 import React from 'react'
 import avatar from '../img/avatar.jpg';
-import {NavLink} from 'react-router-dom';
+import {Link} from 'react-router-dom';
 
 function Navbar() {
     return (
@@ -12,25 +12,25 @@ function Navbar() {
 
                 <ul className="nav-items">
                     <li className="nav-item">
-                        <NavLink to="/" exact activeClassName="active">
+                        <Link to="/" exact activeClassName="active">
                             Home
-                        </NavLink>
+                        </Link>
                     </li>
                     <li className="nav-item">
-                        <NavLink to="/about" exact activeClassName="active">
+                        <Link to="/about" exact activeClassName="active">
                             About
-                        </NavLink>
+                        </Link>
                     </li>
                     <li className="nav-item">
-                        <NavLink to="/projects" exact activeClassName="active">
+                        <Link to="/projects" exact activeClassName="active">
                             Projects
-                        </NavLink>
+                        </Link>
                     </li>
                    
                     <li className="nav-item">
-                        <NavLink to="/contact" exact activeClassName="active">
+                        <Link to="/contact" exact activeClassName="active">
                             Contact
-                        </NavLink>
+                        </Link>
                     </li>
                 </ul>
 

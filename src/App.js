@@ -1,18 +1,24 @@
 import './App.scss';
 import NavBar from './Components/NavBar';
 import HomePage from './Pages/HomePage';
-import {Switch, Route} from 'react-router-dom';
+import {Switch, Route, useHistory} from 'react-router-dom';
 import AboutPage from './Pages/AboutPage';
 import PortfliosPage from './Pages/PortfoliosPage';
 import ContactPage from './Pages/ContactPage';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 function App() {
   const [navToggle, setNavToggle] = useState(false);
+  const history = useHistory();
 
   const navClick = () =>{
     setNavToggle(!navToggle)
   }
+
+  useEffect(() => {
+    history.push("/")
+    // eslint-disable-next-line
+  }, [])
 
   return (
     <div className="App">
@@ -27,16 +33,16 @@ function App() {
       <div className="main-content">
           <div className="content">
             <Switch>
-              <Route path="/" exact>
+              <Route exact path="/">
                 <HomePage />
               </Route>
-              <Route path="/about" exact>
+              <Route path="/about" >
                 <AboutPage />
               </Route>
-              <Route path="/projects" exact>
+              <Route path="/projects" >
                 <PortfliosPage />
               </Route>
-              <Route path="/contact" exact>
+              <Route path="/contact" >
                 <ContactPage />
               </Route>
             </Switch>
