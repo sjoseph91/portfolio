@@ -13,7 +13,7 @@ function ContactPage() {
             </div>
             <div className="ContactPage">
                 <div className="contact-sect">
-                <ContactItem icon={linkedin} text1={'https://www.linkedin.com/in/sean-joseph-00b0a91b6/'}  title={'Linkedin'}/>
+                <ContactItem icon={linkedin} text1={'https://www.linkedin.com/in/sean-c-joseph/'}  title={'Linkedin'}/>
                     <ContactItem icon={github} text1={'https://github.com/sjoseph91'}  title={'Github'}/>
                     <ContactItem icon={email} text1={'mailto:sean_joseph@protonmail.com'} text2={"sean_joseph@protonmail.com"} title={'Email'}/>
                 </div>
